@@ -1,0 +1,152 @@
+:root{
+    --celeste: hsl(185, 75%, 39%);
+    --azulOscuro:hsl(229, 23%, 23%);
+    --azulGrisaceo:hsl(227, 10%, 46%);
+    --grisOscuro:hsl(0, 0%, 59%);
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+h1 , h2{
+    color: var(--azulOscuro);
+}
+
+
+span , p{
+    color: var(--azulGrisaceo);
+    font-weight:400 ;
+    
+}
+
+
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-color: var(--celeste);
+    background-position: right 50vw bottom 50vh, left 50vw top;
+}
+
+.tarjeta{
+    width: 25rem;
+    height: 28rem;
+    background-color: white;
+    border-radius:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px  5px 2rem var(--azulOscuro);
+}
+
+.encabezado{
+    background-image: url(/images/bg-pattern-card.svg);
+    border-radius:1rem 1rem 0 0;
+    height: 35%;
+}
+
+.medio{
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    font-size: 0.8rem;
+    text-align: center;
+    border-bottom:1px solid rgba(206, 204,  205, 0.50);
+    
+}
+
+
+.medio img{
+    border-radius: 4rem;
+    border: 0.4rem solid white;
+    width: 6rem;
+
+}
+
+
+.medio-informacion{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--grisOscuro);
+    margin-bottom: 80px;
+}
+
+
+.medio-informacion h1{
+    font-size:  2rem;
+}
+
+.medio-informacion span{
+    margin-left: 0.3rem;
+}
+
+
+.pie{
+    border-radius:0 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pie div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.pie h2{
+    margin: 1rem 0 0;
+}
+
+.pie p{
+    margin: 0.5rem 0 2rem; 
+}
+
+@media (max-width: 480px){
+    .tarjeta{
+        margin: 0 1.5rem;
+        height: 23rem;
+    }
+
+
+    .medio-informacion h1{
+        font-size: 1rem;
+        margin: 1.5rem 0 0; 
+    }
+
+
+    .medio-informacion p{
+        margin: 0.5rem 0 1rem;
+        font-size: 0.8rem;
+    }
+
+    .pie h2{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .pie p{
+        font-size: 0.7rem;
+        letter-spacing: 0.09rem;
+    }
+
+}
